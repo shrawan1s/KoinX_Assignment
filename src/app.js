@@ -16,6 +16,12 @@ const PORT = process.env.PORT;
 app.use(express.json());
 // Middleware to enable CORS for all routes
 app.use(cors())
+
+// Base route
+app.get('/', async (req, res) => {
+    res.status(200).send("KoinX backend assignment")
+});
+
 // Mounting the upload route under /api path
 app.use('/api', uploadRoute);
 // Mounting the balance route under /api path
