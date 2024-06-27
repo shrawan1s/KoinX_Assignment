@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 // Defining the schema for the 'Trade' collection
 const tradeSchema = new mongoose.Schema({
-    user_id: { type: String, required: true },
+    user_id: { type: Number, required: true },
     utc_time: { type: Date, required: true },
     operation: { type: String, required: true },
     market: { type: String, required: true },

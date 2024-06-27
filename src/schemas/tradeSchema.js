@@ -2,7 +2,7 @@ import * as yup from 'yup';
 
 // Define the schema using yup
 const tradeSchema = yup.object().shape({
-    User_ID: yup.string().required('User ID is required'),
+    User_ID: yup.number().required('User ID is required'),
     UTC_Time: yup.date().required('UTC Time is required'),
     Operation: yup.string().required('Operation is required'),
     Market: yup.string().required('Market is required'),
