@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import uploadRoute from './routes/upload.js';
+import balanceRoute from './routes/balance.js';
 import './db.js';
 
 // Loading environment variables from .env file
@@ -17,6 +18,8 @@ app.use(express.json());
 app.use(cors())
 // Mounting the upload route under /api path
 app.use('/api', uploadRoute);
+// Mounting the balance route under /api path
+app.use('/api', balanceRoute);
 
 // Starting the server and logging the port
 app.listen(PORT, () => {
